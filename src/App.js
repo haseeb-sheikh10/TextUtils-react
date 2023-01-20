@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-// import { Route,
-//         Routes
-//         } from 'react-router-dom';
+import { Route,
+        Routes
+        } from 'react-router-dom';
 import './App.css';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 
@@ -111,15 +111,13 @@ function App() {
   return (
     <>
         <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} blueBtn={blueBtn} redBtn={redBtn} greenBtn={greenBtn} handleSelectBlue={handleSelectBlue} handleSelectgreen={handleSelectgreen} handleSelectRed={handleSelectRed} modeColor={modeColor}/>
-        <Alert alert={alert}/>
-        <TextForm heading="Enter text below to analyze" mode={mode}/>
-        
-        {/* <Routes>
+        <Alert alert={alert}/>        
+        <Routes>
           <Route path="/" element={<TextForm heading="Enter text below to analyze" mode={mode}/>}>
-        </Route>
+          </Route>
           <Route path="/about" element={<About/>}>
-        </Route>
-        </Routes> */}
+          </Route>
+        </Routes>
     </>
   );
 }
